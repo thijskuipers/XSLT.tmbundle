@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+if [[ -e "${TM_SELECTED_FILE}" ]] # does the file exist?
+   then xsltproc - "${TM_SELECTED_FILE}"
+   else exit_show_html "&lt;p&gt;No document selected in File Browser.&lt;/p&gt;"
+fi</string>
+	<key>input</key>
+	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^~@p</string>
+	<key>name</key>
+	<string>Run XSLT (Text)</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>text.xml.xsl</string>
+	<key>uuid</key>
+	<string>E6B451B7-7185-4E77-B288-F14031C8F495</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
