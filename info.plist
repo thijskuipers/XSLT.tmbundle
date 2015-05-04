@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>contactEmailRot13</key>
+	<string>guvwf@oebrf.ay</string>
+	<key>contactName</key>
+	<string>Thijs Kuipers</string>
+	<key>description</key>
+	<string>Support for &lt;a href="http://www.w3.org/TR/xslt"&gt;XSLT&lt;/a&gt;</string>
 	<key>mainMenu</key>
 	<dict>
 		<key>items</key>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+if [[ -e "${TM_SELECTED_FILE}" ]] # does the file exist?
+    then java -jar "${TM_BUNDLE_SUPPORT}/lib/saxon9he.jar" -xsl:- -s:"${TM_SELECTED_FILE}"
+    else exit_show_html "&lt;p&gt;No document selected in File Browser.&lt;/p&gt;"
+fi</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^~@p</string>
+	<key>name</key>
+	<string>Apply XSLT on Selected Document (Text)</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>text.xml.xsl</string>
+	<key>uuid</key>
+	<string>8EAC3342-DD76-471A-B02A-2F4CDA1665ED</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
